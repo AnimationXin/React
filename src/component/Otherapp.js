@@ -16,7 +16,6 @@ class Otherapp extends Component{
                 that.setState({
                     apps: data.data
                 })
-                console.log(this.state.apps)
             }else{
                 alert(data.msg);
             }
