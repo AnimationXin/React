@@ -1,5 +1,6 @@
 import React,{ Component } from 'react';
 import jsonp  from '../util/jsonp';
+import './splike.css';
 class Splike extends Component{
     constructor(item){
         super(item)
@@ -90,10 +91,47 @@ class Splike extends Component{
        }
     }
     render(){
+        let countId = 0;
         return (
-            <div>
-                <p>时{this.state.hour}分{this.state.minutes}秒{this.state.second}</p>
+            <div id="spike">
+            <div className="spike_header">
+                <i></i>
+                <span className="spike_title">掌上时间</span>
+                <div className="spike_time">
+                    {
+                        (() => {
+                            return  <div>
+                                        <span>{this.state.hour}</span>:<span>{this.state.minutes}</span>:<span>{this.state.second}</span>
+                                    </div>
+                                    
+                        })()
+                    }
+                </div>
+                <div className="spike_more fr">
+                    <i className="fr"></i>
+                    <a href={this.state.more}>
+                        <span>更多秒杀</span>
+                    </a>
+                    
+                </div>
+                <div style={{clear:"both"}}></div>
             </div>
+            <ul className="spike_content">
+                {
+                    this.state.stores.map((item,index) => {
+                        return <li key={index}>
+                                    <a href={item.url}>
+                                        <div>
+                                            <img src={item.icon} alt=""/>
+                                        </div>
+                                        <p>¥{item.sprice}</p>
+                                        <p className="real-price">¥{item.price}</p>
+                                    </a>
+                            </li>
+                    })
+                }
+            </ul>
+        </div>
         )
     }
 }
