@@ -1,27 +1,25 @@
-.oapp {
-	height: 165px;
-	background-color: #fff;
+.oapp{
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
 }
-
-.oapp li {
-	font-size: 12px;
-	color: #666;
-	text-align: center;
+.oapp ul{
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+.oapp ul li{
+	display: inline-flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-top:3px;
 	width: 25%;
-	float: left;
-	margin-top: 12px;
 }
-
-.oapp li:last-child:after {
-	content: "";
-	display: block;
-	clear: both;
+.oapp ul li span{
+	font-size: 12px;
+	color:#666;
 }
-
-.oapp a {
-	color: #666;
-}
-
 .app_icon {
 	width: 40px;
 	height: 40px;
