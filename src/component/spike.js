@@ -5,8 +5,8 @@ class Splike extends Component{
     constructor(item){
         super(item)
         this.state = {
-            url: this.props.source,
-            stores:[],
+         
+            stores:[],   url: this.props.source,
             more: '',
             hour: "00",
 			minutes: "00",
