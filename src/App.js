@@ -14,7 +14,14 @@ class App extends Component {
         <OtherApp source="http://localhost:3000/data/otherapp" />
         <Splike source="http://localhost:3000/data/spike" />
         <Like source="http://localhost:3000/data/like" />
-        
+        <div className="container">
+          <ul>
+              <li>首页</li>
+              <li>分类</li>
+              <li>购物车</li>
+              <li>个人</li>
+          </ul>
+        </div>
       </div>
     );
   }
